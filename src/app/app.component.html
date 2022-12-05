@@ -1,10 +1,16 @@
-<div class="app">
+<div class="loader" *ngIf="!availableTanks"></div>
+<div class="app" *ngIf="availableTanks">
+  <div class="chosen-tank"></div>
   <div class="widget">
     <div class="widget-wrap" *ngFor="let tank of availableTanks; let i = index">
-      <div class="widget__roller" *ngIf="i < 5">
+      <div class="widget__roller" #tank>
         <img class="widget__roller-image" src="{{ tank.imgUrl }}" alt="" />
         <div class="widget__roller-text">{{ tank.name }}</div>
       </div>
     </div>
   </div>
+  <button (click)="roll(100)">ROLL1</button>
+  <button (click)="roll(123)">ROLL2</button>
+  <button (click)="roll(450)">ROLL3</button>
+  <button (click)="roll(555)">ROLL4</button>
 </div>
