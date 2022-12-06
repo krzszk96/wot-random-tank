@@ -65,8 +65,7 @@
     }
   }
 }
-.roll-button,
-.reset-button {
+.roll-button {
   position: absolute;
   top: 10px;
   left: 50%;
@@ -84,7 +83,7 @@
 }
 .reset-button {
   position: absolute;
-  top: 92%;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 120px;
